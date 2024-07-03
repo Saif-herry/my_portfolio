@@ -1,0 +1,25 @@
+.header {
+  /* position: fixed; */
+  /* margin-top: -70px; */
+  /* background-color: white; */
+  height: 7em;
+  max-width: 1100px;
+  align-items: center;
+  z-index: 1;
+  /* padding: 20px; */
+  width: 95%;
+  /* margin-left: 150px; */
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 6em;
+  }
+}
+
+img{
+  width: 30px;
+  margin-right: 4px;
+}
