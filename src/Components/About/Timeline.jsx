@@ -67,7 +67,7 @@ export const Timeline = () => {
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            date={'May 2016 - june 2019'}
+            date={'July 2017 - june 2020'}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: '3px solid var(--clr-primary)',
@@ -95,7 +95,7 @@ export const Timeline = () => {
               className='vertical-timeline-element-subtitle'
               data-aos='fade-right'
             >
-              Indira Gandhi National Open University
+              Marwari College Ranchi, Jharkhand.
             </h4>
             <p data-aos='fade-right'>
               Studied Bachelor of Computer Applications (BCA) , it imparts
@@ -107,7 +107,7 @@ export const Timeline = () => {
 
           <VerticalTimelineElement
             className='vertical-timeline-element--work'
-            date={'Aug 2014 - April 2016'}
+            date={'June 2014 - March 2016'}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: '3px solid var(--clr-primary)',
