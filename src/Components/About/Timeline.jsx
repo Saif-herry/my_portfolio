@@ -89,7 +89,7 @@ export const Timeline = () => {
               className='vertical-timeline-element-title'
               data-aos='fade-right'
             >
-              Student[Graduation(Bachelor of Computer Applications)]
+              Student[Graduation(Bachelor of Science IT (H))]
             </h3>
             <h4
               className='vertical-timeline-element-subtitle'
@@ -98,7 +98,7 @@ export const Timeline = () => {
               Marwari College Ranchi, Jharkhand.
             </h4>
             <p data-aos='fade-right'>
-              Studied Bachelor of Computer Applications (BCA) , it imparts
+              Studied Bachelor of Science IT (H), it imparts
               extensive knowledge in Computer Fundamentals, Programming
               Languages, Database Systems, Information Security and Web
               Development.
