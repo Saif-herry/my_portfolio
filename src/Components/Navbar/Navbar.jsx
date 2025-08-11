@@ -17,7 +17,21 @@ export const Navbar = () => {
       element.scrollIntoView();
     }
     setShowNavList(!showNavList);
-  }; ///
+  };
+
+  // ✅ Direct Resume Download Function
+  const handleResumeDownload = (e) => {
+    e.preventDefault(); // Stop default anchor navigation
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/uc?export=download&id=1f6EPMhafzoxsUQBIqjtH6EVNu9h7nkbw"; // direct download link
+    link.download = "Mohammad_Saif_Resume.pdf"; // Suggested file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setShowNavList(false); // close menu after download
+  };
+
   return (
     <>
       <nav className="center nav">
@@ -71,12 +85,11 @@ export const Navbar = () => {
             </a>
           </li>
           <li className="nav__list-item">
+            {/* ✅ Resume Direct Download */}
             <a
-              href="https://drive.google.com/file/d/1f6EPMhafzoxsUQBIqjtH6EVNu9h7nkbw/view?usp=sharing"
-              onClick={toggleNavList}
+              href="/resume"
+              onClick={handleResumeDownload}
               className="link link--nav"
-              target="_blank"
-              rel="noreferrer"
             >
               Resume
             </a>
