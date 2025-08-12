@@ -19,13 +19,23 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 
 export const About = () => {
   const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/uc?export=download&id=1f6EPMhafzoxsUQBIqjtH6EVNu9h7nkbw";
-    link.download = "Mohammad_Saif_Resume.pdf"; // Filename for download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const viewUrl =
+      "https://drive.google.com/file/d/1f6EPMhafzoxsUQBIqjtH6EVNu9h7nkbw/view"; // Preview link
+    const downloadUrl =
+      "https://drive.google.com/uc?export=download&id=1f6EPMhafzoxsUQBIqjtH6EVNu9h7nkbw"; // Direct download link
+
+    // 1️⃣ Open preview tab immediately (prevents popup blocker)
+    window.open(viewUrl, "_blank");
+
+    // 2️⃣ Trigger download slightly after opening new tab
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = "Mohammad_Saif_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 500); // half-second delay
   };
 
   return (
@@ -80,7 +90,12 @@ export const About = () => {
           </a>
         </div>
 
-        <button className="btnResume" onClick={handleResumeDownload}>
+        {/* ✅ Resume button opens new tab & downloads */}
+        <button
+          className="btnResume "
+          onClick={handleResumeDownload}
+          style={{ marginRight: 10 }}
+        >
           Resume
         </button>
       </div>
